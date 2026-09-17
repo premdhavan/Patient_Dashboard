@@ -1,0 +1,28 @@
+-- Patient Dashboard: recommended Power BI measures
+Total Patients = DISTINCTCOUNT(Patient_Cleaned_Data[Patient_ID])
+
+Total Doctors = DISTINCTCOUNT(Patient_Cleaned_Data[Primary_Doctor_ID])
+
+Average Age = AVERAGE(Patient_Cleaned_Data[Age])
+
+Insurance Providers = DISTINCTCOUNT(Patient_Cleaned_Data[Insurance_Provider])
+
+Male Patients =
+CALCULATE(
+    [Total Patients],
+    Patient_Cleaned_Data[Gender] = "Male"
+)
+
+Female Patients =
+CALCULATE(
+    [Total Patients],
+    Patient_Cleaned_Data[Gender] = "Female"
+)
+
+Patients With Chronic Condition =
+CALCULATE(
+    [Total Patients],
+    NOT ISBLANK(Patient_Cleaned_Data[Chronic_Condition])
+)
+
+Average BMI = AVERAGE(Patient_Cleaned_Data[BMI])

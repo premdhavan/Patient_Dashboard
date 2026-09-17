@@ -1,0 +1,22 @@
+let
+    Source = Csv.Document(
+        File.Contents("01_Dataset/Cleaned_Data/Patient_Cleaned_Data.csv"),
+        [Delimiter=",", Columns=26, Encoding=65001, QuoteStyle=QuoteStyle.Csv]
+    ),
+    PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+    ChangedTypes = Table.TransformColumnTypes(
+        PromotedHeaders,
+        {
+            {"Patient_ID", type text}, {"Gender", type text}, {"Age", Int64.Type},
+            {"Age Group", type text}, {"Date_of_Birth", type date},
+            {"Blood_Group", type text}, {"Marital_Status", type text},
+            {"City", type text}, {"State", type text}, {"Country", type text},
+            {"Pincode", type text}, {"Height_cm", type number}, {"Weight_kg", type number},
+            {"BMI", type number}, {"Smoking_Status", type text},
+            {"Alcohol_Consumption", type text}, {"Chronic_Condition", type text},
+            {"Primary_Doctor_ID", type text}, {"Insurance_Provider", type text},
+            {"Registration_Date", type date}
+        }
+    )
+in
+    ChangedTypes
