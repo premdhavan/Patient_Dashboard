@@ -105,10 +105,13 @@ Demonstrate an end-to-end analytics workflow:
 
 
 ## Excel Dashboard Screenshot
-<img width="1600" height="518" alt="Patient DashB SS" src="https://github.com/user-attachments/assets/8550881b-f1a9-4fef-845a-af417ca03322" />
+<img width="1600" height="518" alt="Patient DashB SS" src="https://github.com/user-attachments/assets/fa1a7e33-fac8-4af5-88cf-3915f490b98a" />
+
 
 ## PowerBI Dashboard Screenshot
-<img width="1138" height="644" alt="Patient PowerBI DashB SS" src="https://github.com/user-attachments/assets/c50ff99e-d9d5-41ed-8e29-9bd742f60405" />
+<img width="1138" height="644" alt="Patient PowerBI DashB SS" src="https://github.com/user-attachments/assets/d9e97f62-8906-44c2-a9ec-19a0549ba6b4" />
+
+
 
 
 
